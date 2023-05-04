@@ -1,8 +1,7 @@
-resource "aws_instance" "sample" {
-  ami           = "ami-0089b8e98cd95257d"
-  instance_type = "t3.micro"
+variable "sample" {
+    default = "abc"
+}
 
-  tags = {
-    Name = "HelloWorld"
-  }
+output "sample1"{
+    value = var.sample
 }
