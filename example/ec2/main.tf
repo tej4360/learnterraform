@@ -1,4 +1,4 @@
-resource "aws_instance" "test"{
+resource "aws_instance" "test" {
   ami                    = data.aws_ami.ec2_ami.image_id
   instance_type          = "t3.micro"
   vpc_security_group_ids = [var.sg_id]
