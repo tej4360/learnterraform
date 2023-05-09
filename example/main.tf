@@ -1,4 +1,4 @@
-module "sg" {
+ module "sg" {
    source = "./sg"
  }
 
