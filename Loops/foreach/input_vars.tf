@@ -1,4 +1,4 @@
- variables "fruits" {
+ variable "fruits" {
    default = {
      fruit1 {
        name = "apple"
