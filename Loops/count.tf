@@ -2,10 +2,9 @@ variable "fuits" {
   default = [ "apple", "banana", "orange" ]
 }
 
-variable "count" {
-  default = 10
+resource "null_resource" "null" {
+  count = 5
 }
-
 resource "null_resource" "null_ins" {
   count = length(var.fruits)
   provisioner "local_exec" {
