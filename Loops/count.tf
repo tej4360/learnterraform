@@ -1,5 +1,5 @@
 variable "fuits" {
-  default = [ "apple", "banana" "orange" ]
+  default = [ "apple", "banana", "orange" ]
 }
 
 resource "null_resource" "null_ins" {
