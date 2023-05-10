@@ -5,7 +5,7 @@
  resource "null_resource" "abc" {
    count = length(var.fruits)
    provisioner "local-exec" {
-     command = "echo -e Fruit Name - \e[36m ${var.fruits[count.index]} "
+     command = "echo -e Fruit Name -  ${var.fruits[count.index]}"
    }
  }
 
