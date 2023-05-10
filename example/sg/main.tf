@@ -3,11 +3,11 @@ resource "aws_security_group" "allow_tls" {
   description = "Allow TLS inbound traffic"
 
   ingress {
-    description      = "TLS from VPC"
-    from_port        = 443
-    to_port          = 443
-    protocol         = "tcp"
-    cidr_blocks      = ["0.0.0.0/0"]
+    description = "TLS from VPC"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   egress {
@@ -23,7 +23,6 @@ resource "aws_security_group" "allow_tls" {
   }
 }
 
-
 output "sg_id" {
-  value = "sucurity group is: ${aws_security_group.allow_tls.id}"
+  value = aws_security_group.allow_tls.id
 }
