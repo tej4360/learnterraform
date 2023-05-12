@@ -14,9 +14,6 @@ data "aws_ami" "ec2_ami" {
   owners                 = ["973714476881"]
 }
 
-
-variable "security_group_id" {}
-
 data "aws_security_group" "selected" {
   id = var.security_group_id
 }
