@@ -3,6 +3,6 @@ data "aws_ec2_instance_type" "example" {
 }
 
 output "print" {
-  value = dat.aws_ec2_instance_type.example.ena_support
+  value = data.aws_ec2_instance_type.example.ena_support
 }
 
