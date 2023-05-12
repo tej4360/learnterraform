@@ -1,7 +1,7 @@
 resource "aws_instance" "frontend" {
   ami                    = data.aws_ami.ec2_ami.image_id
   instance_type          = var.instance_type
-  vpc_security_group_ids = [var.sg_id]
+  vpc_security_group_ids = data.aws_security_group.selected.aws_security_group
 
   tags = {
     Name = "frontend"
